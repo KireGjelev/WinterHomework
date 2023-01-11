@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            background: rgb(255, 255, 255);
+            padding: 10px;
+            text-align: center;
+        }
+
+        body {
+            background: #555;
+        }
+
+        .header_explanation {
+            text-decoration: wavy;
+        }
+
+        .btn {
+            margin-right: 5px;
+            width: 50px;
+            height: 35px;
+            border: 2px solid black;
+            border-radius: 30px;
+        }
+
+        .btn-group {
+            max-width: 1150px;
+        }
+
+        #word-container {
+            margin: auto;
+            max-width: 450px;
+            border: 2px solid red;
+        }
+    </style>
+</head>
+
+<script type="text/javascript" src="./javascript.js"></script>
+
+<body>
+    <div class="container">
+        <div class="title">
+            <h1>Hangman</h1>
+            <h3>Javascript Hangman game</h3>
+        </div>
+        <div class="container"><br>
+            <h5>Select type of word to guess</h5>
+            <select id="selected_category" onchange="changeSelectedOption()">
+                <option value="movies">Movies</option>
+                <option value="tv-shows">TV - Shows</option>
+            </select>
+            
+            <h3>You have selected word type of: <h3 id="selected">Movies</h3>   
+        </div>
+
+        <div class="header_explanation"><br>
+            <h4>Use the alphabet below to guess the letter/word</h4>
+        </div>
+        <div class="btn-group btn-group-sm">
+            <button class="btn btn-dark">A</button>
+            <button class="btn btn-dark">B</button>
+            <button class="btn btn-dark">C</button>
+            <button class="btn btn-dark">D</button>
+            <button class="btn btn-dark">E</button>
+            <button class="btn btn-dark">F</button>
+            <button class="btn btn-dark">G</button>
+            <button class="btn btn-dark">H</button>
+            <button class="btn btn-dark">I</button>
+            <button class="btn btn-dark">J</button>
+            <button class="btn btn-dark">K</button>
+            <button class="btn btn-dark">L</button>
+            <button class="btn btn-dark">M</button>
+            <button class="btn btn-dark">N</button>
+            <button class="btn btn-dark">O</button>
+            <button class="btn btn-dark">P</button>
+            <button class="btn btn-dark">Q</button>
+            <button class="btn btn-dark">R</button>
+            <button class="btn btn-dark">S</button>
+            <button class="btn btn-dark">T</button>
+            <button class="btn btn-dark">U</button>
+            <button class="btn btn-dark">V</button>
+            <button class="btn btn-dark">W</button>
+            <button class="btn btn-dark">X</button>
+            <button class="btn btn-dark">Y</button>
+            <button class="btn btn-dark">Z</button>
+        </div>
+        <br>
+        <br>
+
+        <div class="btn-group">
+            <input class="btn-primary" type="button" id="start_button" value="Start game" onclick="startGame()" />
+        </div>
+        <br>
+        <br>
+        <div id="lives_container" clas="container-flex" style="display: none;">
+            <h3>You have <span id="number_lives">6</span> lives left</h3>
+        </div>
+
+        <div id="word-container">
+            <h2 class="text-bold" id="word">-</h2>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<script src="./javascript.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.0.1/math.min.js" integrity="sha512-B82WLflI1EQiR9sGbIV1ddGVvK4ghj1xjMShL7YvcOrHjX2qP72lHztT1DxBVPiz1aTR6mOUJbtwj06uadL2GA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<body>
+    <table style="background-color: rgb(67, 60, 60); border: 3px solid rgb(52, 51, 51); border-radius: 10px;" id="calculator">
+        <tr style="height: 75px;">
+            <td colspan="3"><input disabled type="text" id="result" value="0"/></td>
+            <td><input type="button" value="C" onclick="clr()" style="background-color: rgb(201, 170, 140)"/><br>
+                <input style="margin-top:5px;"  type="button" value="/" onclick="enterValue('/')"/></td>
+        </td>
+        </tr>
+        <div class="buttons_signs"></div>
+        <tr>
+            <td><input class="number" type="button" value="1" onclick="enterValue(1)"/></td>
+            <td><input class="number" type="button" value="2" onclick="enterValue(2)"/></td>
+            <td><input class="number" type="button" value="3" onclick="enterValue(3)"/></td>
+            <td><input  type="button" value="*" onclick="enterValue('*')"/></td>
+        </tr>
+        <tr>
+            <td><input class="number" type="button" value="4" onclick="enterValue(4)"/></td>
+            <td><input class="number" type="button" value="5" onclick="enterValue(5)"/></td>
+            <td><input class="number" type="button" value="6" onclick="enterValue(6)"/></td>
+            <td><input type="button" value="+" onclick="enterValue('+')"/></td>
+        </tr>
+        <tr>
+            <td><input class="number" type="button" value="7" onclick="enterValue(7)"/></td>
+            <td><input class="number" type="button" value="8" onclick="enterValue(8)"/></td>
+            <td><input class="number" type="button" value="9" onclick="enterValue(9)"/></td>
+            <td><input type="button" value="-" onclick="enterValue('-')"/></td>
+    
+        </tr>
+        <tr>
+            <td colspan="2"><input style="width:110px;" class="number" type="button" value="0" onclick="enterValue(0)"/></td>
+            <td colspan="1"><input  type="button" value="." onclick="" style="background-color: rgb(201, 170, 140);"/></td>
+        
+            <td><input type="button" value="=" onclick="evaluateResult()"/></td>
+        </tr>
+        
+      </table>
+    
+    </body>
+    
+    </html>
+</body>
+</html>
